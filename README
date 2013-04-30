@@ -1,0 +1,121 @@
+Inventory List:
+===============
+
+1.  README - This file.
+
+2.  Directory Euler/bin/ - contains compiled class files for:
+            a. org.luciter.euler.Problem67 -
+                The class file containing the solution for /Poject/Euler Problem 67 
+            b. org.luciter.euler.Problem67Test -
+                Groovy test cases for org.luciter.euler.Problem67
+                
+3.  Directory Euler/lib/ - contains jar files employ by:
+            a. org.luciter.euler.Problem67
+            b. org.luciter.euler.Problem67Test
+            
+4.  Directory Euler/src/ - contains source file org.luciter.euler.Problem67.groovy
+
+5.  Directory Euler/test/ - contains source files org.luciter.euler.Problem67Test.groovy
+
+6.  Directory Euler/test_files/ - contains test files
+            a. bad_alpha_char.txt - detects non-numeric character and aborts.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_alpha_char.txt
+                Exception in thread "main" java.lang.NumberFormatException: An input value 'a' is *NOT* numeric.  Task aborted!
+
+            b. bad_larger_first_line.txt - detects first line too long.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_larger_first_line.txt
+                Exception in thread "main" java.lang.IllegalArgumentException: Prior entry length::0 Current input line length::8.  They should be incrementing one by one.
+
+            c. bad_multiple_blank_lines.txt - detects multiple blank lines and aborts.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_multiple_blank_lines.txt
+                Exception in thread "main" java.lang.IllegalArgumentException: Prior entry length::3 Current input line length::1.  They should be incrementing one by one.
+
+            d. bad_alpha_char.txt - detects non-numeric character and aborts.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_alpha_char.txt
+                Exception in thread "main" java.lang.NumberFormatException: An input value '$' is *NOT* numeric.  Task aborted!
+
+            e. bad_zero_length.txt - detects non-numeric character and aborts.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_zero_length.txt
+                Exception in thread "main" java.lang.IllegalStateException: File is empty; aborting ...
+
+            f. bad_row_sequence.txt - file rows are expected to be incrementing one by one.
+                Expected abortion message sample:
+                
+                In file name::./test_files/bad_row_sequence.txt
+                Exception in thread "main" java.lang.IllegalArgumentException: Prior entry length::4 Current input line length::3.  They should be incrementing one by one.
+
+            g. triangler_euler.txt - 100 rows test file from Project Euler.
+                Expected success message sample:
+                
+                In file name::./test_files/triangle_euler.txt
+                *===========================================================*
+                 Max Path    :: [5139, 5362, 5465, ... (extra entries removed for brevity) ... 5137, 5078, 4845]
+                 Max Path Sum:: 7273
+                 Problem67 Started at:: 1310016242344
+                 Problem67 Ended   at:: 1310016243747
+                 Duration            :: 1.403 sec. 
+                *===========================================================*
+
+            h. triangle_test_4rows.txt - 4 rows test file from client.
+                Expected success message sample:
+                
+                In file name::./test_files/triangle_test_4rows.txt
+                *===========================================================*
+                 Max Path    :: [18, 27, 21, 24]
+                 Max Path Sum:: 27
+                 Problem67 Started at:: 1310016383556
+                 Problem67 Ended   at:: 1310016383681
+                 Duration            :: 0.125 sec. 
+                *===========================================================*
+ 
+            i. triangle_test_100rows.txt - 4 rows test file from client.
+                Expected success message sample:
+                
+                In file name::./test_files/triangle_test_100rows.txt
+                *===========================================================*
+                 Max Path    :: [535439, 537333, 547816, ... (extra entries removed for brevity) ... 591871, 551862, 524124]
+                 Max Path Sum:: 732506
+                 Problem67 Started at:: 1310016493222
+                 Problem67 Ended   at:: 1310016494018
+                 Duration            :: 0.796 sec. 
+                *===========================================================*
+
+            j. triangle_test_1000rows.txt - 4 rows test file from client.
+                Expected success message sample:
+                
+                In file name::./test_files/triangle_test_1000rows.txt
+                *===========================================================*
+                 Max Path    :: [4833432, 5018869, 5068516, ... (extra entries removed for brevity) ... 5305240, 5160449, 5151894]
+                 Max Path Sum:: 7434055
+                 Problem67 Started at:: 1310016565545
+                 Problem67 Ended   at:: 1310016569810
+                 Duration            :: 4.265 sec. 
+                *===========================================================*
+
+Usage (Unix):
+=============
+
+  After unzipping the Euler.zip, change directory to Euler (cd Euler).
+  
+  To execute problem solver:
+    java -cp lib/*:bin:. org.luciter.euler.Problem67 <File Name>
+    
+    e.g.
+    java -cp lib/*:bin:. org.luciter.euler.Problem67 ./test_files/triangle_test_100rows.txt
+
+  To execute problem solver junit tester:
+    java -cp lib/*:bin:. org.junit.runner.JUnitCore org.luciter.euler.Problem67Test
+    
+
+
+
